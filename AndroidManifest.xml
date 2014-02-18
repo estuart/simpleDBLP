@@ -22,6 +22,54 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.simpledblp.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.SearchableActivity"
+            android:label="@string/search_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:resource="@xml/searchable"
+                android:value="com.example.simpledblp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.TestActivity2"
+            android:label="@string/title_activity_test_activity2"
+            android:parentActivityName="com.example.simpledblp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.simpledblp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.ItemListActivity"
+            android:label="@string/title_item_list" >
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ItemListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.SearchpageActivity"
+            android:label="@string/title_activity_searchpage" >
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.HelpActivity"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.BookmarksActivity"
+            android:label="@string/title_activity_bookmarks" >
+        </activity>
     </application>
 
 </manifest>

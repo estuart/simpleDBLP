@@ -3,6 +3,21 @@
 
     <string name="app_name">SimpleDBLP</string>
     <string name="action_settings">Settings</string>
+    <string name="authorSearch">Author(s)</string>
+    <string name="author_hint">Search by author\'s name</string>
+    <string name="title_hint">Search by paper title</string>
+    <string name="year_hint">Search by year</string>
+    <string name="venue_hint">Search by venue</string>
+    <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="searchbutton">Search</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_test_activity2">TestActivity2</string>
+    <string name="search_activity">Search Results</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_activity_searchpage">Search</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_bookmarks">BookmarksActivity</string>
 
 </resources>
