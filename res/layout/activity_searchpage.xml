@@ -18,7 +18,8 @@
         android:layout_marginTop="34dp"
         android:ems="10"
         android:inputType="textPersonName" 
-        android:hint="@string/author_hint" />
+        android:hint="@string/author_hint"
+        android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" />
 
     <EditText
         android:id="@+id/title"

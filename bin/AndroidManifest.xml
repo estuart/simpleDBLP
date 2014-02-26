@@ -61,6 +61,9 @@
         <activity
             android:name="com.example.simpledblp.SearchpageActivity"
             android:label="@string/title_activity_searchpage" >
+            <meta-data
+                android:name="android.app.SearchableActivity"
+                android:resource="@xml/searchable"/>
         </activity>
         <activity
             android:name="com.example.simpledblp.HelpActivity"
