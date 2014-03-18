@@ -12,7 +12,11 @@ import android.widget.TextView;
 
 public class SearchpageActivity extends Activity {
 
-	EditText author, title, year, venue;
+	EditText authorSearchField;
+	private String url = "http://dblp.uni-trier.de/search/author?xauthor=";
+	private TextView authorSearch,authors;
+	private HandleXML obj;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,22 +27,12 @@ public class SearchpageActivity extends Activity {
 //		Typeface roboto=Typeface.createFromAsset(getAssets(),"fonts/Roboto-Medium.ttf");
 //		myTextView.setTypeface(roboto);
 		
-		author = (EditText)findViewById(R.id.author);
-		title = (EditText)findViewById(R.id.title);
-		year = (EditText)findViewById(R.id.year);
-		venue = (EditText)findViewById(R.id.venue);
+		authorSearchField = (EditText)findViewById(R.id.author);
+		authorSearch = (TextView)findViewById(R.id.textView2);
+//		title = (EditText)findViewById(R.id.title);
+//		year = (EditText)findViewById(R.id.year);
+//		venue = (EditText)findViewById(R.id.venue);
 		
-		
-		final Button button = (Button) findViewById(R.id.searchButton);
-		
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-            	//right now only working for author
-            	Intent myIntent = new Intent(SearchpageActivity.this, SearchableActivity.class);
-            	myIntent.putExtra("searchQuery", SearchpageActivity.this.author.getText().toString()); //Optional parameters
-            	SearchpageActivity.this.startActivity(myIntent);
-            	}
-        });
 	}
 
 	@Override
@@ -47,5 +41,16 @@ public class SearchpageActivity extends Activity {
 		getMenuInflater().inflate(R.menu.searchpage, menu);
 		return true;
 	}
+	public void open(View view){
+		  String searchValue = authorSearchField.getText().toString();
+		  System.out.println("searchValue: "+searchValue);
+	      String finalUrl = url + searchValue;
+	      //authors.setText(finalUrl);
+	      obj = new HandleXML(finalUrl);
+	      obj.fetchXML();
+	      while(obj.parsingComplete);
+	      authorSearch.setText(obj.getAuthors());
+	      
 
+}
 }

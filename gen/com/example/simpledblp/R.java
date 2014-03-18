@@ -40,15 +40,16 @@ public final class R {
         public static final int LinearLayout1=0x7f0a0002;
         public static final int Search=0x7f0a0003;
         public static final int Settings=0x7f0a0005;
-        public static final int action_settings=0x7f0a000d;
-        public static final int author=0x7f0a0008;
+        public static final int action_settings=0x7f0a000e;
+        public static final int author=0x7f0a000a;
         public static final int gestureOverlayView1=0x7f0a0001;
         public static final int layout1=0x7f0a0007;
+        public static final int listView1=0x7f0a0008;
+        public static final int middleName=0x7f0a000d;
         public static final int searchButton=0x7f0a000b;
         public static final int textView1=0x7f0a0000;
-        public static final int title=0x7f0a0009;
-        public static final int venue=0x7f0a000c;
-        public static final int year=0x7f0a000a;
+        public static final int textView2=0x7f0a0009;
+        public static final int textView3=0x7f0a000c;
     }
     public static final class layout {
         public static final int activity_bookmarks=0x7f030000;
@@ -56,6 +57,7 @@ public final class R {
         public static final int activity_main=0x7f030002;
         public static final int activity_searchable=0x7f030003;
         public static final int activity_searchpage=0x7f030004;
+        public static final int author_listing=0x7f030005;
     }
     public static final class menu {
         public static final int bookmarks=0x7f090000;

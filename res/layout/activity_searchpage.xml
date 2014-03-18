@@ -21,29 +21,14 @@
         android:hint="@string/author_hint"
         android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" />
 
-    <EditText
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/author"
-        android:layout_alignRight="@+id/author"
-        android:layout_below="@+id/author"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="@string/title_hint" />
-
-    <EditText
-        android:id="@+id/year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/title"
-        android:layout_alignRight="@+id/title"
-        android:layout_below="@+id/title"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="number" 
-        android:hint="@string/year_hint"/>
+    <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="15dp"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
         android:id="@+id/searchButton"
@@ -52,17 +37,26 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
-        android:text="@string/searchbutton" />
+        android:text="@string/searchbutton"
+        android:onClick="open" />
 
-    <EditText
-        android:id="@+id/venue"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/year"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="text" 
-        android:hint="@string/venue_hint"/>
+        android:layout_above="@+id/searchButton"
+        android:layout_alignLeft="@+id/author"
+        android:layout_alignRight="@+id/author"
+        android:layout_below="@+id/author"
+        android:layout_marginTop="32dp"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/author"
+        android:layout_below="@+id/author"
+        android:text="Results:" />
 
 </RelativeLayout>
