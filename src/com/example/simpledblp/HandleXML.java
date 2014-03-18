@@ -71,14 +71,18 @@ public class HandleXML {
          System.out.println("Event:"+event);
          while (event != XmlPullParser.END_DOCUMENT) {
             String name=myParser.getName();
+            if(myParser.getAttributeCount()==1){
+            	   System.out.println(myParser.getAttributeValue(0));
+            }
             switch (event){
                case XmlPullParser.START_TAG:
             	   break;
                case XmlPullParser.TEXT:
             	   if(myParser.getText() != "null"){
+            		   System.out.println("Text: "+myParser.getText());
             	   text += myParser.getText();
             	   }
-               break;
+            	   break;
 
                case XmlPullParser.END_TAG:
                   if(name.equals("authors")){
@@ -109,7 +113,7 @@ public class HandleXML {
                   }
                   break;
                   }		 
-                  event = myParser.next(); 
+                  event = myParser.nextToken(); 
 
               }
                  parsingComplete = false;

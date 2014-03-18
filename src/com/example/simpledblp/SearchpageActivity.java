@@ -1,5 +1,7 @@
 package com.example.simpledblp;
 
+import org.w3c.dom.Document;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -10,13 +12,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 public class SearchpageActivity extends Activity {
 
 	EditText authorSearchField;
 	private String url = "http://dblp.uni-trier.de/search/author?xauthor=";
 	private TextView authorSearch,authors;
 	private HandleXML obj;
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
