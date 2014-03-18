@@ -26,7 +26,7 @@ private static final String TAG = "MAIN";
 		
 //		TextView myTextView=(TextView)findViewById(R.id.textView2);
 		Typeface roboto=Typeface.createFromAsset(getAssets(),"fonts/Roboto-Medium.ttf");
-//		myTextView.setTypeface(roboto);
+	//	myTextView.setTypeface(roboto);
 		
 		
 		final Button searchButton = (Button) findViewById(R.id.Search);

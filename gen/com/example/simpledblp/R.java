@@ -40,16 +40,15 @@ public final class R {
         public static final int LinearLayout1=0x7f0a0002;
         public static final int Search=0x7f0a0003;
         public static final int Settings=0x7f0a0005;
-        public static final int action_settings=0x7f0a000e;
+        public static final int action_settings=0x7f0a000d;
         public static final int author=0x7f0a000a;
         public static final int gestureOverlayView1=0x7f0a0001;
         public static final int layout1=0x7f0a0007;
         public static final int listView1=0x7f0a0008;
-        public static final int middleName=0x7f0a000d;
+        public static final int middleName=0x7f0a000c;
         public static final int searchButton=0x7f0a000b;
         public static final int textView1=0x7f0a0000;
         public static final int textView2=0x7f0a0009;
-        public static final int textView3=0x7f0a000c;
     }
     public static final class layout {
         public static final int activity_bookmarks=0x7f030000;

@@ -1,5 +1,7 @@
 package com.example.simpledblp;
 
+import java.util.ArrayList;
+
 import org.w3c.dom.Document;
 
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 
@@ -51,7 +54,11 @@ public class SearchpageActivity extends Activity {
 	      obj = new HandleXML(finalUrl);
 	      obj.fetchXML();
 	      while(obj.parsingComplete);
-	      authorSearch.setText(obj.getAuthors());
+	      //authorSearch.setText(obj.getAuthors());
+	      ArrayList<Author> authLinks= obj.getAuthObj(); 
+	      AuthorListAdapter adapter = new AuthorListAdapter(this, authLinks);
+	      ListView lv = (ListView)findViewById(R.id.listView1);
+	      lv.setAdapter(adapter);
 	      
 
 }
