@@ -75,6 +75,10 @@
             android:name="com.example.simpledblp.BookmarksActivity"
             android:label="@string/title_activity_bookmarks" >
         </activity>
+         <activity
+            android:name="com.example.simpledblp.DBtester"
+            android:label="@string/bookmark_activity" >
+        </activity>
         <activity
             android:name="com.example.simpledblp.ResultsActivity"
             android:label="@string/title_activity_results" >

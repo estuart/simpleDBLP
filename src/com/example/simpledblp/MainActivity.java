@@ -50,7 +50,7 @@ private static final String TAG = "MAIN";
         
         bookMarksButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	Intent myIntent = new Intent(MainActivity.this, BookmarksActivity.class);
+            	Intent myIntent = new Intent(MainActivity.this, DBtester.class);
             	//myIntent.putExtra("searchQuery", MainActivity.this.mEdit.getText().toString()); //Optional parameters
             	MainActivity.this.startActivity(myIntent);
             	}
