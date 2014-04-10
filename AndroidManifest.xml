@@ -3,7 +3,9 @@
     package="com.example.simpledblp"
     android:versionCode="1"
     android:versionName="1.0" >
-	<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="18" />
@@ -63,7 +65,7 @@
             android:label="@string/title_activity_searchpage" >
             <meta-data
                 android:name="android.app.SearchableActivity"
-                android:resource="@xml/searchable"/>
+                android:resource="@xml/searchable" />
         </activity>
         <activity
             android:name="com.example.simpledblp.HelpActivity"
@@ -72,6 +74,10 @@
         <activity
             android:name="com.example.simpledblp.BookmarksActivity"
             android:label="@string/title_activity_bookmarks" >
+        </activity>
+        <activity
+            android:name="com.example.simpledblp.ResultsActivity"
+            android:label="@string/title_activity_results" >
         </activity>
     </application>
 

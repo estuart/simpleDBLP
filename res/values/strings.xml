@@ -19,5 +19,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_help">HelpActivity</string>
     <string name="title_activity_bookmarks">BookmarksActivity</string>
+    <string name="title_activity_results">ResultsActivity</string>
 
 </resources>

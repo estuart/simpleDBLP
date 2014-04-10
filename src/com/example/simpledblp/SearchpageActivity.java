@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -23,7 +24,7 @@ public class SearchpageActivity extends Activity {
 	private TextView authorSearch,authors;
 	private HandleXML obj;
 	
-	@Override
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_searchpage);
@@ -40,15 +41,15 @@ public class SearchpageActivity extends Activity {
 		
 	}
 
-	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.searchpage, menu);
+		//getMenuInflater().inflate(R.menu.searchpage, menu);
 		return true;
 	}
+	
 	public void open(View view){
 		  String searchValue = authorSearchField.getText().toString();
-		  System.out.println("searchValue: "+searchValue);
+		  //System.out.println("searchValue: "+searchValue);
 	      String finalUrl = url + searchValue;
 	      //authors.setText(finalUrl);
 	      obj = new HandleXML(finalUrl);
@@ -59,7 +60,6 @@ public class SearchpageActivity extends Activity {
 	      AuthorListAdapter adapter = new AuthorListAdapter(this, authLinks);
 	      ListView lv = (ListView)findViewById(R.id.listView1);
 	      lv.setAdapter(adapter);
-	      
-
-}
+	   
+	}
 }
