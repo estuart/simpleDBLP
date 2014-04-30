@@ -31,6 +31,7 @@ public class ResultsActivity extends Activity {
 			  Typeface roboto=Typeface.createFromAsset(getAssets(),"fonts/Roboto-Medium.ttf");
 			  myTextView.setTypeface(roboto);
 			  myTextView.setText(urlpt);
+			 
 			  
 			  String finalUrl = url + urlpt;
 			  ArrayList<String> dblpKey = getKey(finalUrl);
