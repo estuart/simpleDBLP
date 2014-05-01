@@ -61,6 +61,7 @@ public class HandleDblpKey {
 //            		   authorObj = new Author(myParser.getText(), urlpt);
 //            		   authorInfo.add(authorObj);
             		   keyList.add(myParser.getText());
+            		   System.out.println(myParser.getText());
             		   //text += myParser.getText();
             		   }
             	   }

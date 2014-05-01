@@ -4,15 +4,16 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.ListActivity;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ResultsActivity extends Activity {
+public class ResultsActivity extends ListActivity {
 	
-	private String url = "http://dblp.uni-trier.de/pers/xk/";
+	private String url = "http://dblp.uni-trier.de/pers/xx/";
 	private String urlpt;
 	private HandleDblpKey keyObj;
 	private HandleXML resultsObj;
@@ -34,15 +35,20 @@ public class ResultsActivity extends Activity {
 			 
 			  
 			  String finalUrl = url + urlpt;
-			  ArrayList<String> dblpKey = getKey(finalUrl);
 			  
-			  for(String key : dblpKey){
+			  keyObj = new HandleDblpKey(finalUrl);
+			  keyObj.fetchXML();
+			  while(keyObj.parsingComplete);
+			  
+			  //ArrayList<String> dblpKey = getKey(finalUrl);
+			  
+			  //for(String key : dblpKey){
 				  //handle xml for either journal or conference entry
 				  //have method that returns journal entries and another that
 				  //returns conference entries
 				  //make array adapters for journal entry and one for conference
 				  //each entry should have a bookmark button that adds it to the db
-			  }
+			 // }
 //			  resultsObj = new HandleXML(finalUrl);
 //		      resultsObj.fetchXML();
 //		      while(resultsObj.parsingComplete);

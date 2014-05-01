@@ -39,7 +39,7 @@ public class AuthorListAdapter extends ArrayAdapter<Author> {
 				
 				@Override
 				public void onClick(View v) {
-					Intent myIntent = new Intent(v.getContext(), ResultsActivity.class);
+					Intent myIntent = new Intent(v.getContext(), ResultsListActivity.class);
 			    	myIntent.putExtra("authorUrlpt", authorUrlpt); //Optional parameters
 			    	v.getContext().startActivity(myIntent);		
 				}
