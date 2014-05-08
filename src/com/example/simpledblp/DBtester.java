@@ -15,6 +15,7 @@ public class DBtester extends Activity {
         //FIX****
         setContentView(R.layout.activity_bookmarks);
          
+        
         DatabaseHandler db = new DatabaseHandler(this);
          
         /**
@@ -22,17 +23,19 @@ public class DBtester extends Activity {
          * */
         // Inserting Contacts
         Log.d("Insert: ", "Inserting .."); 
-        db.addBookmark(new BookmarkDB("Ravi", "Article 1"));        
-        db.addBookmark(new BookmarkDB("Srinivas", "Article 2"));
-        db.addBookmark(new BookmarkDB("Tommy", "Article 3"));
-        db.addBookmark(new BookmarkDB("Karthik", "Article 4"));
+//        db.addBookmark(new BookmarkDB("Ravi", "Article 1"));        
+//        db.addBookmark(new BookmarkDB("Srinivas", "Article 2"));
+//        db.addBookmark(new BookmarkDB("Tommy", "Article 3"));
+//        db.addBookmark(new BookmarkDB("Karthik", "Article 4"));
+        
          
         // Reading all contacts
         Log.d("Reading: ", "Reading all contacts.."); 
-        List<BookmarkDB> contacts = db.getAllBookmarks();       
+        List<BookmarkDB> contacts = db.getAllBookmarks();   
+        
         String fullList = "";
         for (BookmarkDB cn : contacts) {
-            String log = "Id: "+cn.getID()+" ,Name: " + cn.getAuthor() + " ,Phone: " + cn.getTitle() + '\n';
+            String log = "Id: "+cn.getID()+" \nAuthor: " + cn.getAuthor() + " \nTitle: " + cn.getTitle() + " \nURL: "+ cn.getURL() + " \nYear: "+cn.getYear()+"\n\n";
                 // Writing Contacts to log
             Log.d("Name: ", log);
             fullList += log;     

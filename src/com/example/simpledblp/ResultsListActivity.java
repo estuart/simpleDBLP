@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import android.os.Bundle;
@@ -45,6 +46,7 @@ public class ResultsListActivity extends ListActivity {
 	static final String KEY = "r";
 	static final String KEY_PUB = "publication";
 	
+	private ArrayList<HashMap<String, String>> entries = new ArrayList<HashMap<String, String>>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,13 +60,14 @@ public class ResultsListActivity extends ListActivity {
 		else{
 		      String urlpt = intent.getString("authorUrlpt");
 		
-		      ArrayList<HashMap<String, String>> entries = new ArrayList<HashMap<String, String>>();
+		     // ArrayList<HashMap<String, String>> entries = new ArrayList<HashMap<String, String>>();
 		
 		      XMLParser parser = new XMLParser();
 		      String xml = parser.getXmlFromUrl(URL+urlpt);		//get xml
 		      Document doc = parser.getDomElement(xml);			//get dom element
 		      
 		      NodeList nl = doc.getElementsByTagName(KEY);
+
 		      //Now loop through all "r" nodes
 		      for(int i =0; i <nl.getLength(); i++){
 		    	  //create a new hashmap
@@ -73,21 +76,19 @@ public class ResultsListActivity extends ListActivity {
 		    	  String name = e.getTagName();
 		    	  //now add each child node to the HashMap key-> value
 		    	  if(name.equals("r")){
-		    		  String publicationType = parser.getValue(e, KEY_JOURNAL) + parser.getValue(e, KEY_BOOKTITLE);
+//		    		  
 		    		  map.put(KEY_TITLE, parser.getValue(e, KEY_TITLE));
 		    		  map.put(KEY_AUTHOR, parser.getValue(e, KEY_AUTHOR));
 		    		  map.put(KEY_YEAR, parser.getValue(e, KEY_YEAR));
 		    		  map.put(KEY_PAGES, parser.getValue(e, KEY_PAGES));
 		    		  map.put(KEY_EE, parser.getValue(e, KEY_EE));
 		    		  map.put(KEY_URL, parser.getValue(e, KEY_URL));
-		    		  //map.put(KEY_JOURNAL, parser.getValue(e, isPublication(parser.getValue(e,KEY_JOURNAL),parser.getValue(e,KEY_BOOKTITLE))));
 		    		  map.put(KEY_JOURNAL, parser.getValue(e, KEY_JOURNAL));
-		    		  map.put(KEY_BOOKTITLE, parser.getValue(e, KEY_BOOKTITLE));
-		    		  
+		    		  map.put(KEY_BOOKTITLE, parser.getValue(e, KEY_BOOKTITLE));  
 		    	  }
 		    	
 		    	  
-		    	  
+		    	  //map.put(KEY_AUTHOR, authorList);
 		    	  entries.add(map);
 		      }
 		     
@@ -96,8 +97,8 @@ public class ResultsListActivity extends ListActivity {
 
 		     ListAdapter adapter = new SimpleAdapter(this, entries,
 		    		 R.layout.list_entries,
-		    		 new String[] {KEY_TITLE, KEY_AUTHOR, KEY_YEAR}, new int[]{
-		    		 R.id.name,R.id.author,R.id.year});
+		    		 new String[] {KEY_TITLE, KEY_AUTHOR, KEY_YEAR, KEY_PAGES, KEY_EE, KEY_URL,KEY_PUB}, new int[]{
+		    		 R.id.name,R.id.author,R.id.year,R.id.pages, R.id.EE, R.id.URL, R.id.PUB});
 		     
 		     setListAdapter(adapter);
 		     ListView lv = getListView();
@@ -109,15 +110,25 @@ public class ResultsListActivity extends ListActivity {
 							int position, long id) {
 						// getting values from selected ListItem
 						String name = ((TextView) view.findViewById(R.id.name)).getText().toString();
-						String cost = ((TextView) view.findViewById(R.id.author)).getText().toString();
-						String description = ((TextView) view.findViewById(R.id.year)).getText().toString();
+						String author = ((TextView) view.findViewById(R.id.author)).getText().toString();
+						String year = ((TextView) view.findViewById(R.id.year)).getText().toString();
+						String pages = ((TextView) view.findViewById(R.id.pages)).getText().toString();
+						String EE = ((TextView) view.findViewById(R.id.EE)).getText().toString();
+						String URL = ((TextView) view.findViewById(R.id.URL)).getText().toString();
+						String PUB = ((TextView) view.findViewById(R.id.PUB)).getText().toString();
 						
-						// Starting new intent
-						//Intent in = new Intent(getApplicationContext(), SingleMenuItemActivity.class);
-//						in.putExtra(KEY_NAME, name);
-//						in.putExtra(KEY_COST, cost);
-//						in.putExtra(KEY_DESC, description);
-						//startActivity(in);
+						 //Starting new intent
+						Intent in = new Intent(getApplicationContext(), SingleMenuItemActivity.class);
+						in.putExtra(KEY_TITLE, name);
+						in.putExtra(KEY_AUTHOR, author);
+						in.putExtra(KEY_YEAR, year);
+						in.putExtra(KEY_PAGES, pages);
+						in.putExtra(KEY_EE, EE);
+						in.putExtra(KEY_URL, URL);
+						in.putExtra(KEY_PUB, PUB);
+						
+						in.putExtra("values", entries);
+						startActivity(in);
 
 					}
 				});

@@ -85,6 +85,14 @@
             android:label="@string/title_activity_results" >
         </activity>
         <activity
+            android:name="com.example.simpledblp.SingleMenuItemActivity"
+            android:label="@string/single_entry"
+            android:parentActivityName="com.example.simpledblp.ResultsListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.simpledblp.ResultsListActivity" />
+        </activity>
+        <activity
             android:name="com.example.simpledblp.ResultsListActivity"
             android:label="@string/title_activity_results_list"
             android:parentActivityName="com.example.simpledblp.SearchpageActivity" >

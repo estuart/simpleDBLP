@@ -1,26 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical" >
+
   <!-- Name Label -->
-  <TextView android:id="@+id/name_label"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dip"
-            android:textStyle="bold"
-            android:paddingTop="10dip"
-            android:paddingBottom="10dip"
-            android:textColor="#dc6800"/>
+
+  <TextView
+      android:id="@+id/title_label"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="10dip"
+      android:paddingTop="10dip"
+      android:textColor="@color/blue"
+      android:textSize="25dip"
+      android:textStyle="bold" />
+
   <!-- Description Label -->
-  <TextView android:id="@+id/description_label"
+  <TextView android:id="@+id/author_label"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#acacac"/>
+            android:textStyle="bold"
+            android:textColor="#585858"/>
   <!-- Price Label -->
-  <TextView android:id="@+id/cost_label"
+  <TextView android:id="@+id/year_label"
       		android:layout_width="fill_parent"
       		android:layout_height="wrap_content"
       		android:textStyle="bold"/>
+  <TextView android:id="@+id/pages_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#585858"/>
+  <TextView android:id="@+id/ee_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="0dip"
+            android:textColor="#acacac"/>
+  <TextView android:id="@+id/url_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="0dip"
+            android:textColor="#2581c4"/>
+  <TextView android:id="@+id/pub_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="0dip"
+            android:textColor="#acacac"/>
+
+  <Button
+      android:id="@+id/bookmark"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Bookmark" />
+
+  <Button
+      android:id="@+id/openInBrowser"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Open on DBLP" />
+  <Button
+      android:id="@+id/google"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Google" />
+   <Button
+      android:id="@+id/googleScholar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Google Scholar" />
+   <Button
+      android:id="@+id/microsoftAcademic"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Microsoft Academic Search" />
+
 </LinearLayout>

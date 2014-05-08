@@ -18,12 +18,12 @@
     <string name="title_item_detail">Item Detail</string>
     <string name="title_activity_searchpage">Search</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_help">HelpActivity</string>
-    <string name="title_activity_bookmarks">BookmarksActivity</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_bookmarks">Bookmarks</string>
     <string name="title_activity_results">ResultsActivity</string>
-    <string name="title_activity_results_list">ResultsListActivity</string>
+    <string name="title_activity_results_list">Results</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="single_entry">Entry Details</string>
 
 </resources>

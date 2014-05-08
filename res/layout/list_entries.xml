@@ -16,24 +16,63 @@
             android:fontFamily="Roboto"
             android:paddingBottom="2dip"
             android:paddingTop="6dip"
-            android:textColor="#2581c4"
+            android:textColor="#585858"
             android:textSize="16sp"
             android:textStyle="bold" />
 
 		<!-- Description label -->
+
         <TextView
             android:id="@+id/author"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textColor="#acacac"
-            android:paddingBottom="2dip">
+            android:gravity="center_vertical"
+            android:paddingBottom="2dip"
+            android:textColor="#2581c4" >
+
         </TextView>
         <TextView
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
+            android:textColor="#FACC2E"
+            android:textStyle="bold"
+            android:gravity="left">
+        </TextView>
+        <TextView
+            android:id="@+id/pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
             android:textColor="#ffd500"
             android:textStyle="bold"
+            android:textSize="0sp"
+            android:gravity="left">
+        </TextView>
+        <TextView
+            android:id="@+id/EE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textColor="#ffd500"
+            android:textStyle="bold"
+            android:textSize="0sp"
+            android:gravity="left">
+        </TextView>
+        <TextView
+            android:id="@+id/URL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textColor="#ffd500"
+            android:textStyle="bold"
+            android:textSize="0sp"
+            android:gravity="left">
+        </TextView>
+        <TextView
+            android:id="@+id/PUB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textColor="#ffd500"
+            android:textStyle="bold"
+            android:textSize="0sp"
             android:gravity="left">
         </TextView>
         <!-- Linear layout for cost and price Cost: Rs.100 -->
